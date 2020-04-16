@@ -1,0 +1,1292 @@
+command /shop [<text>]:
+	trigger:
+		if arg 1 is not set:
+			wait 5 tick
+			open chest with 5 rows named "&9Shop" to player
+			format slot 10 of player with Oak Log named "&aWood Shop" to close then run [make player execute command "shop Wood"]
+			format slot 11 of player with Stone named "&7Stone Shop" to close then run [make player execute command "shop Stone"]
+			format slot 12 of player with Gray Concrete named "&7Concrete Shop" to close then run [make player execute command "shop Concrete"]
+			format slot 13 of player with White Glass Pane named "&fGlass Panel Shop" to close then run [make player execute command "shop Glass Panel"]
+			format slot 14 of player with Glass named "&fGlass Shop" to close then run [make player execute command "shop Glass"]
+			format slot 15 of player with White Wool named "&fWool Shop" to close then run [make player execute command "shop Wool"]
+			format slot 16 of player with Jack o Lantern named "&6Miscellaneous Shop" to close then run [make player execute command "shop Miscellaneous"]
+			format slot 20 of player with White Terracotta named "&eTerracota Shop" to close then run [make player execute command "shop Terracotta"]
+			format slot 21 of player with Orange Carpet named "&fCarpet Shop" to close then run [make player execute command "shop Carpet"]
+		if arg 1 is "Stone":
+			wait 5 tick
+			open chest with 6 rows named "&9Stone Shop" to player
+			format slot 0 of player with Stone with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy stone"]
+			format slot 1 of player with Cobblestone with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy cobblestone"]
+			format slot 2 of player with Mossy Cobblestone with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy mossy cobblestone"]
+			format slot 3 of player with Stone Brick with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Stone Brick"]
+			format slot 4 of player with Cobblestone Wall with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Cobblestone Wall"]
+			format slot 5 of player with Stone Brick Wall with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Stone Brick Wall"]
+			format slot 6 of player with Smooth Stone Slab with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Smooth Stone Slab"]
+			format slot 7 of player with Stone Brick Slab with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Stone Brick Slab"]
+			format slot 8 of player with Cobblestone Slab with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Cobblestone Slab"]
+			format slot 9 of player with Cobblestone Stairs with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Cobblestone Stairs"]
+			format slot 10 of player with Stone Brick Stairs with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Stone Brick Stairs"]
+			format slot 11 of player with Mossy Stone Brick with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Mossy Stone Brick"]
+			format slot 12 of player with Cracked Stone Brick with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Cracked Stone Brick"]
+			format slot 13 of player with Chiseled Stone Bricks with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Chiseled Stone Bricks"]
+			format slot 45 of player with Name Tag named "Main Shop" to close then run [make player execute command "shop"]
+		if arg 1 is "Wood":
+			wait 5 tick
+			open chest with 6 rows named "&9Wood Shop" to player
+			format slot 0 of player with Oak Planks with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Oak Planks"]
+			format slot 1 of player with Oak Stairs with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Oak Stairs"]
+			format slot 2 of player with Oak Slabs with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Oak Slabs"]
+			format slot 3 of player with Oak Fence with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Oak Fence"]
+			format slot 4 of player with Oak Door with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Oak Door"]
+			#
+			format slot 9 of player with Spruce Planks with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Spruce Planks"]
+			format slot 10 of player with Spruce Stairs with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Spruce Stairs"]
+			format slot 11 of player with Spruce Slabs with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Spruce Slabs"]
+			format slot 12 of player with Spruce Fence with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Spruce Fence"]
+			format slot 13 of player with Spruce Door with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Spruce Door"]
+			#
+			format slot 18 of player with Birch Planks with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Birch Planks"]
+			format slot 19 of player with Birch Stairs with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Birch Stairs"]
+			format slot 20 of player with Birch Slabs with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Birch Slabs"]
+			format slot 21 of player with Birch Fence with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Birch Fence"]
+			format slot 22 of player with Birch Door with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Birch Door"]
+			#
+			format slot 27 of player with Dark Oak Planks with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Dark Oak Planks"]
+			format slot 28 of player with Dark Oak Slabs with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Dark Oak Slabs"]
+			format slot 29 of player with Dark Oak Stairs with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Dark Oak Stairs"]
+			format slot 30 of player with Dark Oak Fence with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Dark Oak Fence"]
+			format slot 31 of player with Dark Oak Door with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Dark Oak Door"] 
+			#
+			format slot 36 of player with Acacia Planks with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Acacia Planks"]
+			format slot 37 of player with Acacia Slabs with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Acacia Slabs"]
+			format slot 38 of player with Acacia Stairs with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Acacia Stairs"]
+			format slot 39 of player with Acacia Fence with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Acacia Fence"]
+			format slot 40 of player with Acacia Door with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Acacia Door"]
+			#
+			format slot 45 of player with Jungle Planks with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Jungle Planks"]
+			format slot 46 of player with Jungle Slabs with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Jungle Slabs"]
+			format slot 47 of player with Jungle Stairs with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Jungle Stairs"]
+			format slot 48 of player with Jungle Fence with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Jungle Fence"]
+			format slot 49 of player with Jungle Door with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Jungle Door"]
+			#
+			format slot 53 of player with Name Tag named "Next Page" to close then run [make player execute command "shop Wood2"]
+		if arg 1 is "Wood2":
+			wait 5 tick
+			open chest with 6 rows named "&9Wood 2 Shop" to player
+			format slot 0 of player with Oak Leaves with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Oak Leaves"]
+			format slot 1 of player with Spruce Leaves with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Spruce Leaves"]
+			format slot 2 of player with Birch Leaves with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Birch Leaves"]
+			format slot 3 of player with Dark Oak Leaves with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Dark Oak Leaves"]
+			format slot 4 of player with Acacia Leaves with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Acacia Leaves"]
+			format slot 5 of player with Jungle Leaves with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Jungle Leaves"]
+			#	
+			format slot 9 of player with Oak Trapdoor with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Oak Trapdoor"]
+			format slot 10 of player with Spruce Trapdoor with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Spruce Trapdoor"]
+			format slot 11 of player with Birch Trapdoor with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Birch Trapdoor"]
+			format slot 12 of player with Jungle Trapdoor with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Jungle Trapdoor"]
+			format slot 13 of player with Acacia Trapdoor with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Acacia Trapdoor"]
+			format slot 14 of player with Dark Oak Trapdoor with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Dark oak Trapdoor"]
+			#
+			format slot 18 of player with Oak Sign with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Oak Sign"]
+			format slot 19 of player with Spruce Sign with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Spruce Sign"]
+			format slot 20 of player with Birch Sign with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Birch Sign"]
+			format slot 21 of player with Jungle Sign with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Jungle Sign"]
+			format slot 22 of player with Acacia Sign with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Acacia Sign"]
+			format slot 23 of player with Dark Oak Sign with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Dark oak Sign"]
+			format slot 27 of player with Ladder with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Ladder "]
+			#
+			format slot 45 of player with Name Tag named "Previous Page" to close then run [make player execute command "shop Wood"]
+		if arg 1 is "Miscellaneous":
+			wait 5 tick
+			open chest with 6 rows named "&9Miscellaneous Shop" to player
+			format slot 0 of player with Bone Meal with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Bone Meal"]
+			format slot 1 of player with Flower Pot with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Flower Pot"]
+			format slot 2 of player with Jack o Lantern with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Jack o Lantern"]
+			format slot 3 of player with Coarse Dirt with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Coarse Dirt"]
+			format slot 4 of player with Barrel with lore "&7Price = 1 Emerald | Cosmetic only" to run [make player execute command "blockbuy Barrel"]
+			format slot 5 of player with Sea Lantern with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Sea Lantern"]
+			format slot 6 of player with Water Bucket with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Water Bucket"]
+			format slot 7 of player with Lava Bucket with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Lava Bucket"]
+			format slot 8 of player with Item Frame with lore "&7Price = 4 Emerald" to run [make player execute command "blockbuy Item Frame"]
+			format slot 9 of player with Iron Bars with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Iron Bars"]
+			format slot 10 of player with Cobweb with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Cobweb"]
+			format slot 45 of player with Name Tag named "Main Shop" to close then run [make player execute command "shop"]
+		if arg 1 is "Concrete":
+			wait 5 tick
+			open chest with 6 rows named "&9Concrete Shop" to player
+			format slot 0 of player with White Concrete with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy White Concrete"]
+			format slot 1 of player with Orange Concrete with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Orange Concrete"]
+			format slot 2 of player with Magenta Concrete with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Magenta Concrete"]
+			format slot 3 of player with Light Blue Concrete with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Light Blue Concrete"]
+			format slot 4 of player with Yellow Concrete with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Yellow Concrete"]
+			format slot 5 of player with Lime Concrete with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Lime Concrete"]
+			format slot 6 of player with Pink Concrete with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Pink Concrete"]
+			format slot 7 of player with Gray Concrete with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Gray Concrete"]
+			format slot 8 of player with Light Gray Concrete with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Light Gray Concrete"]
+			format slot 9 of player with Cyan Concrete with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Cyan Concrete"]
+			format slot 10 of player with Purple Concrete with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Purple Concrete"]
+			format slot 11 of player with Blue Concrete with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Blue Concrete"]
+			format slot 12 of player with Brown Concrete with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Brown Concrete"]
+			format slot 13 of player with Green Concrete with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Green Concrete"]
+			format slot 14 of player with Red Concrete with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Red Concrete"]
+			format slot 15 of player with Black Concrete with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Black Concrete"]
+			format slot 45 of player with Name Tag named "Main Shop" to close then run [make player execute command "shop"]
+		if arg 1 is "Glass":
+			wait 5 tick
+			open chest with 6 rows named "&9Glass Shop" to player
+			format slot 0 of player with White Stained Glass with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy White Stained Glass"]
+			format slot 1 of player with Orange Stained Glass with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Orange Stained Glass"]
+			format slot 2 of player with Magenta Stained Glass with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Magenta Stained Glass"]
+			format slot 3 of player with Light Blue Stained Glass with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Light Blue Stained Glass"]
+			format slot 4 of player with Yellow Stained Glass with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Yellow Stained Glass"]
+			format slot 5 of player with Lime Stained Glass with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Lime Stained Glass"]
+			format slot 6 of player with Pink Stained Glass with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Pink Stained Glass"]
+			format slot 7 of player with Gray Stained Glass with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Gray Stained Glass"]
+			format slot 8 of player with Light Gray Stained Glass with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Light Gray Stained Glass"]
+			format slot 9 of player with Cyan Stained Glass with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Cyan Stained Glass"]
+			format slot 10 of player with Purple Stained Glass with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Purple Stained Glass"]
+			format slot 11 of player with Blue Stained Glass with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Blue Stained Glass"]
+			format slot 12 of player with Brown Stained Glass with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Brown Stained Glass"]
+			format slot 13 of player with Green Stained Glass with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Green Stained Glass"]
+			format slot 14 of player with Red Stained Glass with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Red Stained Glass"]
+			format slot 15 of player with Black Stained Glass with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Black Stained Glass"]
+			format slot 15 of player with Glass with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Glass"]
+			format slot 45 of player with Name Tag named "Main Shop" to close then run [make player execute command "shop"]
+		if arg 1 is "Wool":
+			wait 5 tick
+			open chest with 6 rows named "&9Wool Shop" to player
+			format slot 0 of player with White Wool with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy White Wool"]
+			format slot 1 of player with Orange Wool with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Orange Wool"]
+			format slot 2 of player with Magenta Wool with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Magenta Wool"]
+			format slot 3 of player with Light Blue Wool with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Light Blue Wool"]
+			format slot 4 of player with Yellow Wool with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Yellow Wool"]
+			format slot 5 of player with Lime Wool with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Lime Wool"]
+			format slot 6 of player with Pink Wool with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Pink Wool"]
+			format slot 7 of player with Gray Wool with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Gray Wool"]
+			format slot 8 of player with Light Gray Wool with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Light Gray Wool"]
+			format slot 9 of player with Cyan Wool with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Cyan Wool"]
+			format slot 10 of player with Purple Wool with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Purple Wool"]
+			format slot 11 of player with Blue Wool with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Blue Wool"]
+			format slot 12 of player with Brown Wool with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Brown Wool"]
+			format slot 13 of player with Green Wool with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Green Wool"]
+			format slot 14 of player with Red Wool with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Red Wool"]
+			format slot 15 of player with Black Wool with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Black Wool"]
+			format slot 45 of player with Name Tag named "Main Shop" to close then run [make player execute command "shop"]
+		if arg 1 is "Glass Panel":
+			wait 5 tick
+			open chest with 6 rows named "&9Wool Shop" to player
+			format slot 0 of player with White Stained Glass Pane with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy White Stained Glass Pane"]
+			format slot 1 of player with Orange Stained Glass Pane with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Orange Stained Glass Pane"]
+			format slot 2 of player with Magenta Stained Glass Pane with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Magenta Stained Glass Pane"]
+			format slot 3 of player with Light Blue Stained Glass Pane with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Light Blue Stained Glass Pane"]
+			format slot 4 of player with Yellow Stained Glass Pane with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Yellow Stained Glass Pane"]
+			format slot 5 of player with Lime Stained Glass Pane with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Lime Stained Glass Pane"]
+			format slot 6 of player with Pink Stained Glass Pane with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Pink Stained Glass Pane"]
+			format slot 7 of player with Gray Stained Glass Pane with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Gray Stained Glass Pane"]
+			format slot 8 of player with Light Gray Stained Glass Pane with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Light Gray Stained Glass Pane"]
+			format slot 9 of player with Cyan Stained Glass Pane with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Cyan Stained Glass Pane"]
+			format slot 10 of player with Purple Stained Glass Pane with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Purple Stained Glass Pane"]
+			format slot 11 of player with Blue Stained Glass Pane with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Blue Stained Glass Pane"]
+			format slot 12 of player with Brown Stained Glass Pane with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Brown Stained Glass Pane"]
+			format slot 13 of player with Green Stained Glass Pane with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Green Stained Glass Pane"]
+			format slot 14 of player with Red Stained Glass Pane with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Red Stained Glass Pane"]
+			format slot 15 of player with Black Stained Glass Pane with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Black Stained Glass Pane"]
+			format slot 16 of player with Glass Pane with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Glass Pane"]
+			format slot 45 of player with Name Tag named "Main Shop" to close then run [make player execute command "shop"]
+		if arg 1 is "Terracotta":
+			wait 5 tick
+			open chest with 6 rows named "&9Terracota Shop" to player
+			format slot 0 of player with White Terracotta with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy White Terracotta"]
+			format slot 1 of player with Orange Terracotta with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Orange Terracotta"]
+			format slot 2 of player with Magenta Terracotta with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Magenta Terracotta"]
+			format slot 3 of player with Light Blue Terracotta with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Light Blue Terracotta"]
+			format slot 4 of player with Yellow Terracotta with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Yellow Terracotta"]
+			format slot 5 of player with Lime Terracotta with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Lime Terracotta"]
+			format slot 6 of player with Pink Terracotta with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Pink Terracotta"]
+			format slot 7 of player with Gray Terracotta with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Gray Terracotta"]
+			format slot 8 of player with Light Gray Terracotta with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Light Gray Terracotta"]
+			format slot 9 of player with Cyan Terracotta with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Cyan Terracotta"]
+			format slot 10 of player with Purple Terracotta with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Purple Terracotta"]
+			format slot 11 of player with Blue Terracotta with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Blue Terracotta"]
+			format slot 12 of player with Brown Terracotta with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Brown Terracotta"]
+			format slot 13 of player with Green Terracotta with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Green Terracotta"]
+			format slot 14 of player with Red Terracotta with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Red Terracotta"]
+			format slot 15 of player with Black Terracotta with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Black Terracotta"]
+			format slot 45 of player with Name Tag named "Main Shop" to close then run [make player execute command "shop"]
+		if arg 1 is "Carpet":
+			wait 5 tick
+			open chest with 6 rows named "&Carpet Shop" to player
+			format slot 0 of player with White Carpet with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy White Carpet"]
+			format slot 1 of player with Orange Carpet with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Orange Carpet"]
+			format slot 2 of player with Magenta Carpet with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Magenta Carpet"]
+			format slot 3 of player with Light Blue Carpet with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Light Blue Carpet"]
+			format slot 4 of player with Yellow Carpet with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Yellow Carpet"]
+			format slot 5 of player with Lime Carpet with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Lime Carpet"]
+			format slot 6 of player with Pink Carpet with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Pink Carpet"]
+			format slot 7 of player with Gray Carpet with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Gray Carpet"]
+			format slot 8 of player with Light Gray Carpet with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Light Gray Carpet"]
+			format slot 9 of player with Cyan Carpet with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Cyan Carpet"]
+			format slot 10 of player with Purple Carpet with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Purple Carpet"]
+			format slot 11 of player with Blue Carpet with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Blue Carpet"]
+			format slot 12 of player with Brown Carpet with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Brown Carpet"]
+			format slot 13 of player with Green Carpet with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Green Carpet"]
+			format slot 14 of player with Red Carpet with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Red Carpet"]
+			format slot 15 of player with Black Carpet with lore "&7Price = 1 Emerald" to run [make player execute command "blockbuy Black Carpet"]
+			format slot 45 of player with Name Tag named "Main Shop" to close then run [make player execute command "shop"]
+
+command /blockbuy [<text>]:
+	trigger:
+		if arg 1 is "stone":
+			if player has 1 emerald:
+				give player 64 stone
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "cobblestone":
+			if player has 1 emerald:
+				give player 64 cobblestone
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "mossy cobblestone":
+			if player has 1 emerald:
+				give player 64 mossy cobblestone
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Stone Brick":
+			if player has 1 emerald:
+				give player 64 Stone Brick
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Cobblestone Wall":
+			if player has 1 emerald:
+				give player 64 Cobblestone Wall
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Stone Brick Wall":
+			if player has 1 emerald:
+				give player 64 Stone Brick Wall
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Smooth Stone Slab":
+			if player has 1 emerald:
+				give player 64 Smooth Stone Slab
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Stone Brick Slab":
+			if player has 1 emerald:
+				give player 64 Stone Brick Slab
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Cobblestone Slab":
+			if player has 1 emerald:
+				give player 64 Cobblestone Slab
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Cobblestone Stairs":
+			if player has 1 emerald:
+				give player 64 Cobblestone Stairs
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Stone Brick Stairs":
+			if player has 1 emerald:
+				give player 64 Stone Brick Stairs
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Mossy Stone Brick":
+			if player has 1 emerald:
+				give player 64 Mossy Stone Brick
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Cracked Stone Brick":
+			if player has 1 emerald:
+				give player 64 Cracked Stone Brick
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Chiseled Stone Bricks":
+			if player has 1 emerald:
+				give player 64 Chiseled Stone Bricks
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		#Oak
+		if arg 1 is "Oak Planks":
+			if player has 1 emerald:
+				give player 64 Oak Planks
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Oak Slabs":
+			if player has 1 emerald:
+				give player 64 Oak Slabs
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Oak Stairs":
+			if player has 1 emerald:
+				give player 64 Oak Stairs
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Oak Fence":
+			if player has 1 emerald:
+				give player 64 Oak Fence
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Oak Door":
+			if player has 1 emerald:
+				give player 1 Oak Door
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Oak Slabs":
+			if player has 1 emerald:
+				give player 64 Oak Slabs
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		#Spruce
+		if arg 1 is "Spruce Planks":
+			if player has 1 emerald:
+				give player 64 Spruce Planks
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Spruce Stairs":
+			if player has 1 emerald:
+				give player 64 Spruce Stairs
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Spruce Slabs":
+			if player has 1 emerald:
+				give player 64 Spruce Slabs
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Spruce Fence":
+			if player has 1 emerald:
+				give player 64 Spruce Fence
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Spruce Door":
+			if player has 1 emerald:
+				give player 64 Spruce Door
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		#Birch 
+		if arg 1 is "Birch Planks":
+			if player has 1 emerald:
+				give player 64 Birch Planks
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Birch Stairs":
+			if player has 1 emerald:
+				give player 64 Birch Stairs
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Birch Slabs":
+			if player has 1 emerald:
+				give player 64 Birch Slabs
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Birch Fence":
+			if player has 1 emerald:
+				give player 64 Birch Fence
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Birch Door":
+			if player has 1 emerald:
+				give player 1 Birch Door
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		#Dark Oak
+		if arg 1 is "Dark Oak Planks":
+			if player has 1 emerald:
+				give player 64 Dark Oak Planks
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Dark Oak Slabs":
+			if player has 1 emerald:
+				give player 64 Dark Oak Slabs
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Dark Oak Stairs":
+			if player has 1 emerald:
+				give player 64 Dark Oak Stairs
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Dark Oak Fence":
+			if player has 1 emerald:
+				give player 64 Dark Oak Fence
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Dark Oak Door":
+			if player has 1 emerald:
+				give player 1 Dark Oak Door
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		#Acacia
+		if arg 1 is "Acacia Planks":
+			if player has 1 emerald:
+				give player 64 Acacia Planks
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Acacia Slabs":
+			if player has 1 emerald:
+				give player 64 Acacia Slabs
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Acacia Stairs":
+			if player has 1 emerald:
+				give player 64 Acacia Stairs
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Acacia Fence":
+			if player has 1 emerald:
+				give player 64 Acacia Fence
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Acacia Door":
+			if player has 1 emerald:
+				give player 1 Acacia Door
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		#Jungle 
+		if arg 1 is "Jungle Planks":
+			if player has 1 emerald:
+				give player 64 Jungle Planks
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Jungle Slabs":
+			if player has 1 emerald:
+				give player 64 Jungle Slabs
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Jungle Stairs":
+			if player has 1 emerald:
+				give player 64 Jungle Stairs
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Jungle Fence":
+			if player has 1 emerald:
+				give player 64 Jungle Fence
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Jungle Door":
+			if player has 1 emerald:
+				give player 1 Jungle Door
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		#Leaves
+		if arg 1 is "Oak Leaves":
+			if player has 1 emerald:
+				give player 64 Oak Leaves
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Spruce Leaves":
+			if player has 1 emerald:
+				give player 64 Spruce Leaves
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Birch Leaves":
+			if player has 1 emerald:
+				give player 64 Birch Leaves
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Dark Oak Leaves":
+			if player has 1 emerald:
+				give player 64 Dark Oak Leaves
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Acacia Leaves":
+			if player has 1 emerald:
+				give player 64 Acacia Leaves
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Jungle Leaves":
+			if player has 1 emerald:
+				give player 64 Jungle Leaves
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		#Trapdoors
+		if arg 1 is "Oak Trapdoor":
+			if player has 1 emerald:
+				give player 16 Oak Trapdoor
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Spruce Trapdoor":
+			if player has 1 emerald:
+				give player 16 Spruce Trapdoor
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Birch Trapdoor":
+			if player has 1 emerald:
+				give player 16 Birch Trapdoor
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Jungle Trapdoor":
+			if player has 1 emerald:
+				give player 16 Jungle Trapdoor
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Acacia Trapdoor":
+			if player has 1 emerald:
+				give player 16 Acacia Trapdoor
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Dark Oak Trapdoor":
+			if player has 1 emerald:
+				give player 16 Dark Oak Trapdoor
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Ladder":
+			if player has 1 emerald:
+				give player 16 Ladder
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		#Signs
+		if arg 1 is "Oak Sign":
+			if player has 1 emerald:
+				give player 16 Oak Sign
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Spruce Sign":
+			if player has 1 emerald:
+				give player 16 Spruce Sign
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Birch Sign":
+			if player has 1 emerald:
+				give player 16 Birch Sign
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Jungle Sign":
+			if player has 1 emerald:
+				give player 16 Jungle Sign
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Acacia Sign":
+			if player has 1 emerald:
+				give player 16 Acacia Sign
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Dark Oak Sign":
+			if player has 1 emerald:
+				give player 16 Dark Oak Sign
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		#Misce
+		if arg 1 is "Bone Meal":
+			if player has 1 emerald:
+				give player 8 Bone Meal
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Flower Pot":
+			if player has 1 emerald:
+				give player 8 Flower Pot
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Jack o Lantern":
+			if player has 1 emerald:
+				give player 16 Jack o Lantern
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Coarse Dirt":
+			if player has 1 emerald:
+				give player 64 Coarse Dirt 
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Barrel":
+			if player has 1 emerald:
+				give player 8 Barrel
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Sea Lantern":
+			if player has 1 emerald:
+				give player 16 Sea Lantern
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Water Bucket":
+			if player has 1 emerald:
+				give player 2 Water Bucket
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Lava Bucket":
+			if player has 1 emerald:
+				give player 4 Lava Bucket
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Item Frame":
+			if player has 4 emerald:
+				give player 1 Item Frame
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Iron Bars":
+			if player has 1 emerald:
+				give player 32 Iron Bars
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Cobweb":
+			if player has 1 emerald:
+				give player 16 Cobweb
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+#concrete
+		if arg 1 is "White Concrete":
+			if player has 1 emerald:
+				give player 64 White Concrete
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Orange Concrete":
+			if player has 1 emerald:
+				give player 64 Orange Concrete
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Magenta Concrete":
+			if player has 1 emerald:
+				give player 64 Magenta Concrete
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Light Blue Concrete":
+			if player has 1 emerald:
+				give player 64 Light Blue Concrete
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Yellow Concrete":
+			if player has 1 emerald:
+				give player 64 Yellow Concrete
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Lime Concrete":
+			if player has 1 emerald:
+				give player 64 Lime Concrete
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Pink Concrete":
+			if player has 1 emerald:
+				give player 64 Pink Concrete
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Gray Concrete":
+			if player has 1 emerald:
+				give player 64 Gray Concrete
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Light Gray Concrete":
+			if player has 1 emerald:
+				give player 64 Light Gray Concrete
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Cyan Concrete":
+			if player has 1 emerald:
+				give player 64 Cyan Concrete
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Purple Concrete":
+			if player has 1 emerald:
+				give player 64 Purple Concrete
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Blue Concrete":
+			if player has 1 emerald:
+				give player 64 Blue Concrete
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Brown Concrete":
+			if player has 1 emerald:
+				give player 64 Brown Concrete
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Green Concrete":
+			if player has 1 emerald:
+				give player 64 Green Concrete
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Red Concrete":
+			if player has 1 emerald:
+				give player 64 Red Concrete
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Black Concrete":
+			if player has 1 emerald:
+				give player 64 Black Concrete
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		#glass
+		if arg 1 is "White Stained Glass":
+			if player has 1 emerald:
+				give player 64 White Stained Glass
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Orange Stained Glass":
+			if player has 1 emerald:
+				give player 64 Orange Stained Glass
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Magenta Stained Glass":
+			if player has 1 emerald:
+				give player 64 Magenta Stained Glass
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Light Blue Stained Glass":
+			if player has 1 emerald:
+				give player 64 Light Blue Stained Glass
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Yellow Stained Glass":
+			if player has 1 emerald:
+				give player 64 Yellow Stained Glass
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Lime Stained Glass":
+			if player has 1 emerald:
+				give player 64 Lime Stained Glass
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Pink Stained Glass":
+			if player has 1 emerald:
+				give player 64 Pink Stained Glass
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Gray Stained Glass":
+			if player has 1 emerald:
+				give player 64 Gray Stained Glass
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Light Gray Stained Glass":
+			if player has 1 emerald:
+				give player 641 Light Gray Stained Glass
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Cyan Stained Glass":
+			if player has 1 emerald:
+				give player 64 Cyan Stained Glass
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Purple Stained Glass":
+			if player has 1 emerald:
+				give player 64 Purple Stained Glass
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Blue Stained Glass":
+			if player has 1 emerald:
+				give player 64 Blue Stained Glass
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Brown Stained Glass":
+			if player has 1 emerald:
+				give player 64 Brown Stained Glass
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Green Stained Glass":
+			if player has 1 emerald:
+				give player 64 Green Stained Glass
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Red Stained Glass":
+			if player has 1 emerald:
+				give player 64 Red Stained Glass
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Black Stained Glass":
+			if player has 1 emerald:
+				give player 64 Black Stained Glass
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Glass":
+			if player has 1 emerald:
+				give player 64 Glass
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+#Wool
+		if arg 1 is "White Wool":
+			if player has 1 emerald:
+				give player 64 White Wool
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Orange Wool":
+			if player has 1 emerald:
+				give player 64 Orange Wool
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Magenta Wool":
+			if player has 1 emerald:
+				give player 64 Magenta Wool
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Light Blue Wool":
+			if player has 1 emerald:
+				give player 64 Light Blue Wool
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Yellow Wool":
+			if player has 1 emerald:
+				give player 64 Yellow Wool
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Lime Wool":
+			if player has 1 emerald:
+				give player 64 Lime Wool
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Pink Wool":
+			if player has 1 emerald:
+				give player 64 Pink Wool
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Gray Wool":
+			if player has 1 emerald:
+				give player 64 Gray Wool
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Light Gray Wool":
+			if player has 1 emerald:
+				give player 641 Light Gray Wool
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Cyan Wool":
+			if player has 1 emerald:
+				give player 64 Cyan Wool
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Purple Wool":
+			if player has 1 emerald:
+				give player 64 Purple Wool
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Blue Wool":
+			if player has 1 emerald:
+				give player 64 Blue Wool
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Brown Wool":
+			if player has 1 emerald:
+				give player 64 Brown Wool
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Green Wool":
+			if player has 1 emerald:
+				give player 64 Green Wool
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Red Wool":
+			if player has 1 emerald:
+				give player 64 Red Wool
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Black Wool":
+			if player has 1 emerald:
+				give player 64 Black Wool
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "White Stained Glass Pane":
+			if player has 1 emerald:
+				give player 64 White Stained Glass Pane
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Orange Stained Glass Pane":
+			if player has 1 emerald:
+				give player 64 Orange Stained Glass Pane
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Magenta Stained Glass Pane":
+			if player has 1 emerald:
+				give player 64 Magenta Stained Glass Pane
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Light Blue Stained Glass Pane":
+			if player has 1 emerald:
+				give player 64 Light Blue Stained Glass Pane
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Yellow Stained Glass Pane":
+			if player has 1 emerald:
+				give player 64 Yellow Stained Glass Pane
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Lime Stained Glass Pane":
+			if player has 1 emerald:
+				give player 64 Lime Stained Glass Pane
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Pink Stained Glass Pane":
+			if player has 1 emerald:
+				give player 64 Pink Stained Glass Pane
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Gray Stained Glass Pane":
+			if player has 1 emerald:
+				give player 64 Gray Stained Glass Pane
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Light Gray Stained Glass Pane":
+			if player has 1 emerald:
+				give player 641 Light Gray Stained Glass Pane
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Cyan Stained Glass Pane":
+			if player has 1 emerald:
+				give player 64 Cyan Stained Glass Pane
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Purple Stained Glass Pane":
+			if player has 1 emerald:
+				give player 64 Purple Stained Glass Pane
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Blue Stained Glass Pane":
+			if player has 1 emerald:
+				give player 64 Blue Stained Glass Pane
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Brown Stained Glass Pane":
+			if player has 1 emerald:
+				give player 64 Brown Stained Glass Pane
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Green Stained Glass Pane":
+			if player has 1 emerald:
+				give player 64 Green Stained Glass Pane
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Red Stained Glass Pane":
+			if player has 1 emerald:
+				give player 64 Red Stained Glass Pane
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Black Stained Glass Pane":
+			if player has 1 emerald:
+				give player 64 Black Stained Glass Pane
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Glass Pane":
+			if player has 1 emerald:
+				give player 64 Glass Pane
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		#Terracota
+		if arg 1 is "White Terracotta":
+			if player has 1 emerald:
+				give player 64 White Terracotta
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Orange Terracotta":
+			if player has 1 emerald:
+				give player 64 Orange Terracotta
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Magenta Terracotta":
+			if player has 1 emerald:
+				give player 64 Magenta Terracotta
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Light Blue Terracotta":
+			if player has 1 emerald:
+				give player 64 Light Blue Terracotta
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Yellow Terracotta":
+			if player has 1 emerald:
+				give player 64 Yellow Terracotta
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Lime Terracotta":
+			if player has 1 emerald:
+				give player 64 Lime Terracotta
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Pink Terracotta":
+			if player has 1 emerald:
+				give player 64 Pink Terracotta
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Gray Terracotta":
+			if player has 1 emerald:
+				give player 64 Gray Terracotta
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Light Gray Terracotta":
+			if player has 1 emerald:
+				give player 641 Light Gray Terracotta
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Cyan Terracotta":
+			if player has 1 emerald:
+				give player 64 Cyan Terracotta
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Purple Terracotta":
+			if player has 1 emerald:
+				give player 64 Purple Terracotta
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Blue Terracotta":
+			if player has 1 emerald:
+				give player 64 Blue Terracotta
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Brown Terracotta":
+			if player has 1 emerald:
+				give player 64 Brown Terracotta
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Green Terracotta":
+			if player has 1 emerald:
+				give player 64 Green Terracotta
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Red Terracotta":
+			if player has 1 emerald:
+				give player 64 Red Terracotta
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Black Terracotta":
+			if player has 1 emerald:
+				give player 64 Black Terracotta
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		#Carpet
+
+		if arg 1 is "White Carpet":
+			if player has 1 emerald:
+				give player 64 White Carpet
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Orange Carpet":
+			if player has 1 emerald:
+				give player 64 Orange Carpet
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Magenta Carpet":
+			if player has 1 emerald:
+				give player 64 Magenta Carpet
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Light Blue Carpet":
+			if player has 1 emerald:
+				give player 64 Light Blue Carpet
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Yellow Carpet":
+			if player has 1 emerald:
+				give player 64 Yellow Carpet
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Lime Carpet":
+			if player has 1 emerald:
+				give player 64 Lime Carpet
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Pink Carpet":
+			if player has 1 emerald:
+				give player 64 Pink Carpet
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Gray Carpet":
+			if player has 1 emerald:
+				give player 64 Gray Carpet
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Light Gray Carpet":
+			if player has 1 emerald:
+				give player 641 Light Gray Carpet
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Cyan Carpet":
+			if player has 1 emerald:
+				give player 64 Cyan Carpet
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Purple Carpet":
+			if player has 1 emerald:
+				give player 64 Purple Carpet
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Blue Carpet":
+			if player has 1 emerald:
+				give player 64 Blue Carpet
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Brown Carpet":
+			if player has 1 emerald:
+				give player 64 Brown Carpet
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Green Carpet":
+			if player has 1 emerald:
+				give player 64 Green Carpet
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Red Carpet":
+			if player has 1 emerald:
+				give player 64 Red Carpet
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
+		if arg 1 is "Black Carpet":
+			if player has 1 emerald:
+				give player 64 Black Carpet
+				remove 1 emerald from player
+			else:
+				send "You don't have the blocks"
